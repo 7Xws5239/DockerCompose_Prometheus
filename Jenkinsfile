@@ -5,6 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+                sh 'pwd'
                 sh 'ls -l'
                 sshCommand remote: [
                     name: 'remote-server',
