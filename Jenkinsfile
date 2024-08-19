@@ -17,7 +17,7 @@ pipeline {
                         allowAnyHosts: true
                     ], command: '''
                         echo Hello from remote server;
-                        scp -i ${currentDir}/huawei_bowman.pem ${currentDir}/huawei_bowman.pem root@124.71.189.214:/root/download/subdir
+                        scp -i ${currentDir}/huawei_bowman.pem ${currentDir}/huawei_bowman.pem root@124.71.189.214:/root/download/subdir;
                         ls -l;
                         uptime
                     '''
