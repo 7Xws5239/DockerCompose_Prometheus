@@ -8,7 +8,7 @@ pipeline {
                     def currentDir = sh(script: 'pwd', returnStdout: true).trim()
                     echo "Current directory is: ${currentDir}"
                     
-                    sh 'scp -i ${currentDir}/huawei_bowman.pem ${currentDir}/huawei_bowman.pem root@124.71.189.214:/root/download/subdir'
+                    sh 'scp -i ${currentDir}/huawei_bowman.pem -o StrictHostKeyChecking=no ${currentDir}/huawei_bowman.pem root@124.71.189.214:/root/download/subdir'
                     sshCommand remote: [
                         name: 'remote-server',
                         host: '124.71.189.214',
