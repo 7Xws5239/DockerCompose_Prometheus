@@ -16,7 +16,6 @@ pipeline {
                         port: 22,
                         allowAnyHosts: true
                     ], command: 'echo Hello from remote server'
-                    }
                 }
             }
         }
