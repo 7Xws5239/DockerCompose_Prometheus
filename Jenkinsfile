@@ -21,8 +21,9 @@ pipeline {
                         allowAnyHosts: true
                     ], command: '''
                         echo Hello from remote server;
-                        mkdir dockercompose;
-                        ls -l;
+                        tar xzvf /root/download/prom.tar.gz -C /root/download
+                        cd /root/download/prom
+                        docker-compose up
                     '''
                 }
             }
