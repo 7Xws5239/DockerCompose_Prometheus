@@ -15,7 +15,11 @@ pipeline {
                         identityFile: "${currentDir}/huawei_bowman.pem", // 使用获取到的工作目录路径
                         port: 22,
                         allowAnyHosts: true
-                    ], command: 'echo Hello from remote server'
+                    ], command: '''
+                        echo Hello from remote server;
+                        ls -l;
+                        uptime
+                    '''
                 }
             }
         }
