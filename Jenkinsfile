@@ -21,8 +21,8 @@ pipeline {
                         allowAnyHosts: true
                     ], command: '''
                         echo Hello from remote server;
+                        mkdir dockercompose;
                         ls -l;
-                        uptime
                     '''
                 }
             }
